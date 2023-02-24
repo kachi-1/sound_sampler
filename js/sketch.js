@@ -50,6 +50,7 @@ function setup() {
   button6.position(100, 50);
   button6.mousePressed(()=>playSound(Titles[5]));
 
+ 
   dSlider = createSlider(0., 1., 0.5, 0.05);
   dSlider.mouseReleased( () => {
     delay.delayTime.value=dSlider.value();
@@ -59,7 +60,8 @@ function setup() {
 
 function draw() {
   background(220);
-  
+  text('move slider to increase/decrease sound delay' ,0, 350);
+  text('press buttons for sound' ,0, 150);
 }
 
 function playSound(soundName) {
